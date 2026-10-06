@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>สมัครเรียน</title>
+    <link rel="stylesheet" href="css/recruitstyle.css">
+</head>
+<body>
+    <header>
+        <div class="container header-content">
+            <div class="header-left">
+                <img src="image/logo_kmutnb.jpg" alt="ตราสัญลักษณ์ มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าพระนครเหนือ" class="header-logo">
+                <div class="header-text-container">
+                    <p class="header-text">มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าพระนครเหนือ</p>
+                    <p class="header-text">King Mongkut's University of Technology North Bangkok</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <nav class="container" aria-label="เมนูหลัก">
+        <div class="navbar">
+            <a href="index.html" class="nav-item">หน้าแรก</a>
+            <a href="recruit.html" class="nav-item active" aria-current="page">สมัครเรียน</a>
+            <a href="list.html" class="nav-item">ประกาศรายชื่อ</a>
+            <a href="schedule.html" class="nav-item">กำหนดการรับนักศึกษาใหม่</a>
+            <a href="news.html" class="nav-item">ข่าวสารวิทยาลัย</a>
+            <a href="inquire.html" class="nav-item">สอบถามหลักสูตร</a>
+        </div>
+    </nav>
+
+    <main class="form-container">
+        <h1 class="form-title">ลงทะเบียนเพื่อสมัครเรียน</h1>
+
+        <form action="#" method="POST" enctype="multipart/form-data">
+
+            <!-- ข้อมูลส่วนตัว -->
+            <div class="form-section">
+                <h3>ข้อมูลส่วนตัวพื้นฐาน</h3>
+
+                <div class="form-group">
+                    <label for="firstname">ชื่อ <span class="required">*</span></label>
+                    <input type="text" id="firstname" name="firstname" placeholder="กรอกชื่อ" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="lastname">นามสกุล <span class="required">*</span></label>
+                    <input type="text" id="lastname" name="lastname" placeholder="กรอกนามสกุล" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="national-id">เลขบัตรประจำตัวประชาชน <span class="required">*</span></label>
+                    <input type="text" id="national-id" name="national_id" pattern="[0-9]{13}" maxlength="13" placeholder="เลข 13 หลัก ตัวอย่าง: 1234567890123" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="dob">วัน เดือน ปีเกิด <span class="required">*</span></label>
+                    <input type="date" id="dob" name="dob" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="age">อายุ (ปี) <span class="required">*</span></label>
+                    <input type="number" id="age" name="age" min="1" max="100" placeholder="กรอกอายุ" required>
+                </div>
+
+                <div class="form-group">
+                    <label>เพศ <span class="required">*</span></label>
+                    <div class="radio-group">
+                        <label><input type="radio" name="gender" value="male" required> ชาย</label>
+                        <label><input type="radio" name="gender" value="female"> หญิง</label>
+                        <label><input type="radio" name="gender" value="other"> ไม่ระบุ</label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ข้อมูลการติดต่อ -->
+            <div class="form-section">
+                <h3>ข้อมูลการติดต่อ</h3>
+
+                <div class="form-group">
+                    <label for="current-address">ที่อยู่ปัจจุบัน <span class="required">*</span></label>
+                    <textarea id="current-address" name="current_address" rows="3" placeholder="บ้านเลขที่ ซอย ถนน แขวง/ตำบล เขต/อำเภอ จังหวัด รหัสไปรษณีย์" required></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="registered-address">ที่อยู่ตามทะเบียนบ้าน <span class="required">*</span></label>
+                    <textarea id="registered-address" name="registered_address" rows="3" placeholder="กรอกที่อยู่ตามทะเบียนบ้าน" required></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">หมายเลขโทรศัพท์ <span class="required">*</span></label>
+                    <input type="tel" id="phone" name="phone" pattern="[0-9]{9,10}" maxlength="10" placeholder="ตัวอย่าง: 0812345678" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">อีเมล <span class="required">*</span></label>
+                    <input type="email" id="email" name="email" placeholder="example@email.com" required>
+                </div>
+            </div>
+
+            <!-- ข้อมูลครอบครัว -->
+            <div class="form-section">
+                <h3>ข้อมูลครอบครัวและผู้ปกครอง</h3>
+
+                <div class="form-group">
+                    <label for="guardian-name">ชื่อ-นามสกุลผู้ปกครอง <span class="required">*</span></label>
+                    <input type="text" id="guardian-name" name="guardian_name" placeholder="กรอกชื่อ-นามสกุลผู้ปกครอง" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="guardian-job">อาชีพของผู้ปกครอง</label>
+                    <input type="text" id="guardian-job" name="guardian_job" placeholder="กรอกอาชีพผู้ปกครอง">
+                </div>
+
+                <div class="form-group">
+                    <label for="guardian-phone">หมายเลขโทรศัพท์ผู้ปกครอง <span class="required">*</span></label>
+                    <input type="tel" id="guardian-phone" name="guardian_phone" pattern="[0-9]{9,10}" maxlength="10" placeholder="ตัวอย่าง: 0812345678" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="family-income">รายได้เฉลี่ยของครอบครัว (ต่อเดือน)</label>
+                    <select id="family-income" name="family_income">
+                        <option value="" disabled selected>-- เลือกช่วงรายได้ --</option>
+                        <option value="below-15000">ต่ำกว่า 15,000 บาท</option>
+                        <option value="15000-30000">15,000 - 30,000 บาท</option>
+                        <option value="30001-50000">30,001 - 50,000 บาท</option>
+                        <option value="above-50000">มากกว่า 50,000 บาท</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- แนบเอกสาร -->
+            <div class="form-section">
+                <h3>เอกสารหลักฐานที่ต้องใช้แนบ</h3>
+
+                <div class="form-group">
+                    <label for="student-photo">รูปถ่ายชุดนักเรียน/นักศึกษา (.jpg, .png) <span class="required">*</span></label>
+                    <input type="file" id="student-photo" name="student_photo" accept="image/jpeg, image/png" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="id-card-copy">สำเนาบัตรประชาชน (.pdf, .jpg, .png) <span class="required">*</span></label>
+                    <input type="file" id="id-card-copy" name="id_card_copy" accept=".pdf, image/jpeg, image/png" required>
+                </div>
+            </div>
+
+            <div class="button-group">
+                <button type="submit" class="btn btn-primary">ลงทะเบียน</button>
+                <button type="reset" class="btn btn-secondary">รีเซ็ตข้อมูล</button>
+            </div>
+
+        </form>
+    </main>
+</body>
+</html>
